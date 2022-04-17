@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BOOTSTRAP NAVBAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
+    <link href="arkaplan-düzenleme.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container border border-primary rounded mt-2">
+    <h1>BOOTSTRAP BİLGİLENDİRME</h1>
+        <p>Bootstrap, HTML, CSS ve JavaScript ile yazılmış kullanışlı, yeniden kullanılabilir kod parçalarından oluşan dev bir koleksiyondur.
+         Ayrıca, geliştiricilerin ve tasarımcıların hızla tam olarak duyarlı web siteleri oluşturmasını sağlayan bir frameworktür.
+         Bootstrap web uygulaması geliştirme araç takımı, eski Twitter çalışanları Mark Otto ve Jacob Thornton tarafından oluşturulmuştur. 
+         Bootstrap ile geliştiriciler web uygulamaları geliştirirken, tasarım konusunda endişelenmeden geliştirme çalışmalarına odaklanabilir 
+         ve iyi görünümlü bir web sitesini hızlı bir şekilde çalışır hale getirebilir.
+         Tersine, web tasarımcılarına ilginç Bootstrap temaları oluşturmak için sağlam bir temel sağlar.<br>
+         <kbd>Arka plan rengi kahverengi olan kısımlar kurulum için</kbd><br>
+         <kbd>Arka plan rengi mor olan kısımlar örnek ve gösterim için</kbd><br>
+         <kbd>Arka plan rengi sarı olan kısımlar kodları daha rahat incelemeniz için</kbd>
+        </p>
+</div>
+
+<div class="container border border-primary rounded mt-2">
+	<h2>KURULUM</h2>
+     <h3>Bootstrap Nasıl Kullanılır?</h3>
+      <p>Bootstrap içerisinde hazır kodlar bulunduğu için kopyala yapıştır şeklinde tasarımlar yapabilirsiniz.
+           Ancak tasarım yapabilmek için yerine getirmeniz gereken bazı işlemler var.
+            Güncel bir tasarım aracı olduğu için sayfanız mutlaka HTML5 olmalıdır.
+            HTML5 sayfanızı kullanıma hazır hale getirebilmek için jquery cript ve CSS dosyasını internet sayfanıza mutlaka eklemeniz gerekir.
+             Bu işlemleri yaparak sayfanızdaki tüm tasarımların referans adresini getbootstrap.com olarak belirlersiniz. 
+            Siteye girdikten sonra ana sayfanın üst kısmında bulunan menüdeki Getting Started butonuna tıklayarak
+            Bootstrap ile tasarım yapmaya başlayabilirsiniz.
+       </p>
+    <ul class="renklendirme">
+        <li class="kurulum-renk">
+            Javascript, CSS ve Componet alanlarında sizi bekleyen kodları kopyaladıktan sonra yapıştırarak işlemlerinizi halledebilirsiniz.
+         <a href="https://getbootstrap.com/">Bootstrap kütüphanesinin ana sayfası</a>
+             adresinden erişebilirsiniz.<br />
+            <ul class="list-group">
+                <li class="kurulum-renk m-1">
+                    Bu siteye geldiğimizde iki yöntem kullanabiliriz.
+                     Öncelikle siteye girdikten sonra önümüze gelen download tuşuna basıp tüm dosyaları indirdikten sonra işimize yarayanları
+                     kod dosyamıza taşıyabiliriz. Site açıldığında sizi bu sayfa karşılıyor         <br>                    
+            <img src="images/1download-yontemi.png" class="img-fluid" alt="download adımları" width="700" height="400" >
+           <br> Site açıldığında sizi bu sayfa karşılıyor burada download tuşuna bastığımızda ise yönlendirdiği sayfa bu şekilde;
+           <img src="images/2download-devam.png" class="img-fluid" width="700" alt="download adımları" height="400">
+          <br> Burada ikinci tıkladığımız download tuşundan sonra otomatik rar uzantılı dosya inmeye başlayacak. 
+           Bu dosya indikten sonra kütüphanenizde size uygun olan çalışacağınız kütüphane uzantılarını
+            kendiniz seçerek oluşturduğunuz kod dizinine dosyaları aktarmanız yeterlidir.
+                </li>
+            </ul>      
+        </li>
+        <li class="kurulum-renk">
+           Eğer dosya indirmek istemiyorsanız ikinci yöntemi kullanabilirsiniz burası daha basit. 
+           Bootstrap sitesine geldiğinizde sayfanın alt kısmına indiğinizde jsDelivr kısmını göreceksiniz.
+           Burada css ve Javascript linkleri hazır bulunuyor. Copy tuşunu basıp kopylayıp kod kısmıızda
+           <kbd> < head > </kbd> etiketinin içine yazmanız yeterli.
+           <img src="images/3getstardet-yontemi.png" class="img-fluid" width="1250" height="400" alt="get stardet adımları"> 
+           Kodlarınız bootstrap kütüphanesine entegre olmuş durumda bundan sonra kod yazmaya başlayabilirsiniz.         
+        </li>
+    </ul>
+</div>
+
+<div class="container border border-primary rounded mt-2">
+	<h2>Sitenin amacı</h2>
+     <p>
+     Bu sitemizde size bootstrap kütüphanesi kullanarak navbar yapımını anlatacağım.
+     Bununla beraber navbar çeşitlerini örnekler göstererek anlatacağım. Bu sitenin
+      sonuna geldiğinizde kendiniz navbar yapacak duruma geleceksiniz.
+     </p>
+    <div class="row border border-secondary rounded m-1">
+        <div class="col-lg-8">
+            <img src="images/4navbar-ornek.png" alt="Bootstrap ile navbar görünüm örnekleri" class="img-fluid" width="800" height="400" >
+        </div>
+        <div class="col-lg-4">
+            Navbar(menü) üç farklı tipte yapılar size bu çeşitleri de başlıklar altında anlatacağım. 
+            Üç farklı navbar tipi;<br> Static Navbar<br> Fixed Navbar<br>Bottom Navbar
+        </div>
+    </div>
+</div>
+
+<div class="container border border-primary rounded mt-2">
+	<h3>Static Navbar</h3>    
+        <p>  Static navbar diğer adı ise standart navbar diye geçer. Sayfanın istediğimiz yerine konumlandırabiliriz.
+            Bu menü sayfanın en üstün de boydon boya oluşan bir menü.
+            İstediğimiz kadar button ekleyebiliriz. Aşşağı sarı kısımda bu navbarı yazdığım kodları göreceksiniz.
+        Aşşağıya kodu entegre ettim çalışır halini görebilirsiniz.</p>
+            
+    
+        <code class="fw-bold">  
+            <pre>
+                <!-- Burası çalışmayan static navbar-->
+                <h4>Bütün kodların "<" simgesi ile etiketler arasına boşluk koydum çalışmasın görünsün diye</h4>
+                < body>
+                    < nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      < div class="container-fluid">
+                           < a class="navbar-brand" href="#">Navbar Yapımı </a>
+                         < button class="navbar-toggler"
+                         type="button"
+                          data-bs-toggle="collapse"
+                           data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                             aria-expanded="false"
+                            aria-label="Toggle navigation">             
+                           < span class="navbar-toggler-icon"></span>
+                         < /button>
+                        < div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          < ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            < li class="nav-item">
+                              < a class="nav-link active" aria-current="page" href="#">Anasayfa Navbar Nedir?</a>
+                            < /li>
+                            < li class="nav-item">
+                              < a class="nav-link"  href="#">Navbar Üst(STATİC)</a>
+                            < /li>
+                            < li class="nav-item">
+                              < a class="nav-link"  href="#">Navbar Fixed</a>
+                            < /li>
+                            < li class="nav-item">
+                              < a class="nav-link" href="#">Navbar Alt(BOTTOM)</a>
+                            < /li>
+                            < li class="nav-item dropdown">
+                              < a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Eklentili buton
+                              < /a>
+                              < ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                < li>< a class="dropdown-item" href="#"">Bootstrap ne işe yarar?</a></li>
+                                < li>< a class="dropdown-item" href="#"">Bootstrap nedir?</a></li>
+                                < li>< a class="dropdown-item" href="#"">Hakkımda</a></li>
+                              < /ul>
+                            < /li>
+                            
+                          < /ul>
+                          < form class="d-flex">
+                            < input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            < button class="btn btn-outline-success" type="submit">Search</button>
+                          < /form>
+                        < /div>
+                       < /div> <br> <br> 
+            </pre>
+         </code>
+                     <!-- Burası çalışan static navbar-->
+        <body>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                       <a class="navbar-brand" href="#">Navbar Yapımı </a>
+                     <button class="navbar-toggler"
+                     type="button"
+                      data-bs-toggle="collapse"
+                       data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                         aria-expanded="false"
+                        aria-label="Toggle navigation">             
+                       <span class="navbar-toggler-icon"></span>
+                     </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                          <a class="nav-link     "  href="#">Anasayfa Navbar Nedir?</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page"  href="#">Navbar Üst(STATİC)</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link"  href="#">Navbar Fixed</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Navbar Alt(BOTTOM)</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Eklentili buton
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"">Bootstrap ne işe yarar?</a></li>
+                            <li><a class="dropdown-item" href="#"">Bootstrap nedir?</a></li>
+                            <li><a class="dropdown-item" href="#"">Hakkımda</a></li>
+                          </ul>
+                        </li>
+                        
+                      </ul>
+                      <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                    </div> <br> <br>
+    
+</div>
+<br><br><br><br>
+
+<div class="container border border-primary rounded mt-2">
+	<h3>Fixed Navbar</h3>    
+        <p> Bu da sayfanın en alt ve en üstünde sabit kalan bir menü eklememiz için. Diğer navbarlar kayarken bu yerinde sabit duracaktır.
+             En önemli özelliği ise sabit olması.
+            Bunun da yapısı ilki ile aynı.Tek farkı ise en üste olması için ana dive 
+            navbar navbar-default navbar-fixed-top en altta olması için navbar navbar-default navbar-fixed-bottom vermemiz yeterli.
+            İstediğimiz kadar button ekleyebiliriz. Aşşağı sarı kısımda bu navbarı yazdığım kodları göreceksiniz.
+        Aşşağıya kodu entegre ettim çalışır halini görebilirsiniz.</p>
+            
+    
+        <code class="fw-bold">  
+            <pre>
+                <h4>Bütün kodların "<" simgesi ile etiketler arasına boşluk koydum çalışmasın görünsün diye</h4>
+                   <!-- Burası çalışmayan fixed navbar-->
+                < body>
+                    < nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                      < div class="container-fluid">
+                        < a class="navbar-brand" href="#">NAVBAR YAPIMI</a>
+                        < button
+                          class="navbar-toggler"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#navbar-yapımı"
+                          aria-controls="navbar-yapımı"
+                          aria-expanded="false"
+                          aria-label="Toggle navigation"
+                        >
+                          < span class="navbar-toggler-icon"></span>
+                        < /button>
+                        < div class="collapse navbar-collapse" id="navbar-yapımı">
+                          < div class="navbar-nav ms-auto">
+                            < a class="nav-link active" aria-current="page" href="navbar nedir açıklama.html">Anasayfa Navbar Nedir?</a>
+                            < a class="nav-link" href="#"">Navbar Üst(STATİC)</a>
+                            < a class="nav-link" href="#"">Navbar Fixed</a>
+                            < a class="nav-link" href="#"">Navbar Alt(BOTTOM)</a>
+                          < /div>
+                        < /div>
+                      < /div>
+                    < /nav>
+                      < /div>
+                    < /div>
+                  < /div> 
+            </pre>
+         </code>
+          <!-- Burası çalışan fixed navbar-->
+         <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">NAVBAR YAPIMI</a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbar-yapımı"
+                  aria-controls="navbar-yapımı"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-yapımı">
+                  <div class="navbar-nav ms-auto">
+                    <a class="nav-link "  href="navbar nedir açıklama.html">Anasayfa Navbar Nedir?</a>
+                    <a class="nav-link" href="#"">Navbar Üst(STATİC)</a>
+                    <a class="nav-link active" href="#"">Navbar Fixed</a>
+                    <a class="nav-link" href="#"">Navbar Alt(BOTTOM)</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+              </div>
+            </div>
+          </div> 
+    </div>
+    <div class="container border border-primary rounded mt-2">
+        <h3>Alt(BOTTOM) Navbar</h3>    
+            <p> Bu da ilk başta anlattığım static navbar gibidir. Sayfanın alt kısmını boydan boya kaplayacaktır.
+                İstediğimiz kadar button ekleyebiliriz. Aşşağı sarı kısımda bu navbarı yazdığım kodları göreceksiniz.
+            Aşşağıya kodu entegre ettim çalışır halini görebilirsiniz.</p>
+                
+        
+            <code class="fw-bold">  
+                <pre>
+                    <h4>Bütün kodların "<" simgesi ile etiketler arasına boşluk koydum çalışmasın görünsün diye</h4>
+                       <!-- Burası çalışmayan alt(bottom) navbar-->
+                       < body>
+                        < nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
+                          < div class="container-fluid">
+                            < a class="navbar-brand" href="#">NAVBAR YAPIMI</a>
+                            < button
+                              class="navbar-toggler"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#navbar-yapımı"
+                              aria-controls="navbar-yapımı"
+                              aria-expanded="false"
+                              aria-label="Toggle navigation"
+                            >
+                              < span class="navbar-toggler-icon"></span>
+                            < /button>
+                            < div class="collapse navbar-collapse" id="navbar-yapımı">
+                              < div class="navbar-nav ms-auto">
+                                < a class="nav-link active" aria-current="page" href="#">Anasayfa Navbar Nedir?</a>
+                                < a class="nav-link" href="#">Navbar Üst(STATİC)</a>
+                                < a class="nav-link" href="#">Navbar Fixed</a>
+                                < a class="nav-link" href="#">Navbar Alt(BOTTOM)</a>
+                              < /div>
+                            < /div>
+                          < /div>
+                        < /nav>                  
+                          < /div>
+                        < /div>
+                      < /div>
+                </pre>
+             </code>
+              <!-- Burası çalışan alt(bottom) navbar-->
+              <body>
+                <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">NAVBAR YAPIMI</a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbar-yapımı"
+                      aria-controls="navbar-yapımı"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-yapımı">
+                      <div class="navbar-nav ms-auto">
+                        <a class="nav-link " aria-current="page" href="#">Anasayfa Navbar Nedir?</a>
+                        <a class="nav-link" href="#">Navbar Üst(STATİC)</a>
+                        <a class="nav-link" href="#">Navbar Fixed</a>
+                        <a class="nav-link active" href="#">Navbar Alt(BOTTOM)</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                  </div>
+                </div>
+              </div>
+        </div>
+    <div class="container border border-primary rounded mt-2">
+      <h3>Yaptığımız Navbar(menü) sitede nasıl görünüyor onlara bakalım</h3>
+        <div class="row border border-secondary rounded m-1">
+        <div class="col-lg-8">
+            <img src="images/6navbar-static-gorunum.png" class="img-fluid" alt="Static Navbar sitede görünümü"/>
+        </div>
+        <div class="col-lg-4">
+            Kullandığımız bootstrap ile oluşturduğumuz static navbar(menü) site görünümü bu şekilde. 
+            Bu navbar(menü) beyaz oldu diğerlerinden farklı bir renk kullanmak istedim.
+             Renk boyut buton yapılanması konusunda tamamen özgür olabilirsiniz.<br />
+            <kbd>STATİC NAVBAR</kbd> <br />
+        </div>
+     </div>
+    <div class="row border border-secondary rounded m-1">
+    <div class="col-lg-8">
+        <img src="images/7navbar-fixed-gorunum.png" class="img-fluid" alt="Static Navbar sitede görünümü"/>
+    </div>
+    <div class="col-lg-4">
+        Kullandığımız bootstrap ile oluşturduğumuz fixed navbar(menü) site görünümü bu şekilde.
+        Burada static navbar(menü) ile farkı renk onu değiştirmek istedim ve butonlar sağ kısımda 
+        onları da kod kısmına bakarsanız "right" komutuyla sağa taşıdık.<br />
+        <kbd>FİXED NAVBAR</kbd> <br />
+    </div>
+   </div>
+    <div class="row border border-secondary rounded m-1">
+    <div class="col-lg-8">
+        <img src="images/8navbar-bottom-gorunum.png" class="img-fluid" alt="Static Navbar sitede görünümü"/>
+    </div>  
+    <div class="col-lg-4">
+        Kullandığımız bootstrap ile oluşturduğumuz alt(bottom) navbar(menü) site görünümü bu şekilde. Bu navbar(menü) 
+        renk seçimim static navbaar(menü) ile aynı oldu. Sadece menümüz aşşağıda.<br />
+        <kbd>ALT(BOTTOM) NAVBAR</kbd> <br />
+    </div>
+    </div>
+    </div>
+  <div class="container border border-primary rounded mt-2">
+        <div class="col-lg-12">
+            <h4>Son açıklama</h4>
+            <code class="fw-bold">
+            Böylece Navbar(menü) yapımını adımlarıyla ve çeşitleriyle anlatmış üstüne de nasıl göründüklerini sizlere göstermiş olduk. Umarım anlattıklarımız sizler için faydalı olur. Kodların tamamına ulaşmak isterseni sizler için tekrar github profilimi
+            link olarak bırakacağım oradan çalışmalarım içinden "Bootstrap ile Navbar(menü) yapımı" adlı çalışmama bakmanız yeterli.
+            İlgilendiğiniz için teşekkür ederim. 
+            <a href="https://github.com/saidkaynarca">GitHub profilim</a></code>
+        </div>
+    </div>    
+    
+    
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
